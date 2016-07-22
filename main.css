@@ -1,3 +1,35 @@
 body {
-	background: #000000
+	background-color: #252525;
+	color: #f0f0f0;
 }
+
+ul {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li a {
+	text-decoration: none;
+}
+
+.horizontal-list li {
+	display: inline;
+}
+
+nav li a {
+	padding: 8px 16px;
+	color: #212121;
+}
+
+nav li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+#main-navigation {
+	background-color: #e2e0e9;
+	color: #eeeeee;
+	font-size: 16pt;
+}
+
