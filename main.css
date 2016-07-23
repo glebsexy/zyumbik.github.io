@@ -1,6 +1,6 @@
 body {
-	background-color: #252525;
-	color: #f0f0f0;
+	background-color: #f0f0f5;
+	color: #202020;
 	margin: 0;
 	padding: 0;
 }
@@ -68,17 +68,21 @@ nav li a:hover {
 	color: #ffffff;
 	height: 48px;
 	width: 48px;
-	box-shadow: initial;
+	margin: 16px;
+	box-shadow: 0px 4px 8px rgba(0,0,0,.36);
 }
 
 .fab:hover {
-	background-color: #5e6;
 	-webkit-transition: .5s;
 	-o-transition: .5s;
 	transition: .5s;
+	box-shadow: 0px 6px 12px rgba(0,0,0,.26);
 }
 
 .fab:active {
-	background-color: #4d5;
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+	box-shadow: 0px 8px 16px rgba(0,0,0,.26);
 }
 
