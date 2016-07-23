@@ -1,6 +1,8 @@
 body {
 	background-color: #252525;
 	color: #f0f0f0;
+	margin: 0;
+	padding: 0;
 }
 
 @keyframes runaway {
@@ -13,9 +15,12 @@ h1 {
 }
 
 ul {
+	list-style-type: none; 
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
 }
 
 li a {
@@ -23,49 +28,57 @@ li a {
 }
 
 .horizontal-list li {
-	display: inline;
+	display: inline-block;
 }
 
 nav li a {
 	padding: 8px 16px;
-	color: #212121;
+	color: #555555;
+	text-align: center;
+	display: block;
 }
 
 nav li a:hover {
-	background-color: #555;
-	color: white;
+	background-color: #eeeeee;
+	color: #000000;
 }
 
 #main-navigation {
-	background-color: #e2e0e9;
+	background-color: #f9f9f9;
 	color: #eeeeee;
 	font-size: 16pt;
 }
 
 .button {
-	background-color: #2fbb32;
-	border-radius: 50%;
-	color: #ffffff;
 	border: none;
 	outline: 0;
 	text-align: center;
 	text-decoration: none;
-	height: 48px;
-	width: 48px;
-	box-shadow: initial;
-	font-weight: bold;
 }
 
 .button:hover {
+}
+
+.button:active {
+}
+
+.fab {
+	background-color: #2fbb32;
+	border-radius: 50%;
+	color: #ffffff;
+	height: 48px;
+	width: 48px;
+	box-shadow: initial;
+}
+
+.fab:hover {
 	background-color: #5e6;
 	-webkit-transition: .5s;
 	-o-transition: .5s;
 	transition: .5s;
-	-webkit-animation: runaway 1s;
-	-o-animation: runaway 1s;
-	animation: runaway 1s;
 }
 
-.button:active {
+.fab:active {
 	background-color: #4d5;
 }
+
