@@ -12,6 +12,8 @@ body {
 
 h1 {
 	font-size: 48px;
+	margin-left: 48px;
+	margin-right: 48px;
 }
 
 ul {
@@ -47,6 +49,12 @@ nav li a:hover {
 	background-color: #f9f9f9;
 	color: #eeeeee;
 	font-size: 16pt;
+	margin-bottom: 48px;
+}
+
+#main-content {
+	margin: 16px;
+	position: relative;
 }
 
 .button {
@@ -74,7 +82,6 @@ nav li a:hover {
 	color: #ffffff;
 	margin: 16px;
 	box-shadow: 0px 4px 8px rgba(0,0,0,.36);
-	position: fixed;
 }
 
 .fab:hover {
@@ -90,5 +97,18 @@ nav li a:hover {
 	-o-transition: .3s;
 	transition: .3s;
 	box-shadow: 0px 12px 16px rgba(0,0,0,.26);
+}
+
+article {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+
+article ~ .fab {
+	position: absolute;
+	z-index: 2;
+	right: 0px;
 }
 
