@@ -16,7 +16,20 @@ h1 {
 	margin-right: 48px;
 }
 
+div {
+	border: 1px hidden red;
+}
+
+header {
+	border: 1px hidden blue;
+}
+
+article {
+	border: 1px hidden green;
+}
+
 a {
+	border: 1px hidden black;
 	cursor: pointer;
 	-moz-user-select: none;
 	-webkit-user-select: none;

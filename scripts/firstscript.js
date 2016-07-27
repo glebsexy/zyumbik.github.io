@@ -15,28 +15,28 @@ window.onload = function() {
 			if (bordersVisible === 1) {
 				div[i].style.borderStyle = "hidden";
 			} else {
-				div[i].style.border = "1px solid red";
+				div[i].style.borderStyle = "solid";
 			}
 		}
 		for (var i = header.length - 1; i >= 0; i--) {
 			if (bordersVisible === 1) {
 				header[i].style.borderStyle = "hidden";
 			} else {
-				header[i].style.border = "1px solid blue";
+				header[i].style.borderStyle = "solid";
 			}
 		}
 		for (var i = a.length - 1; i >= 0; i--) {
 			if (bordersVisible === 1) {
 				a[i].style.borderStyle = "hidden";
 			} else {
-				a[i].style.border = "1px solid black";
+				a[i].style.borderStyle = "solid";
 			}
 		}
 		for (var i = article.length - 1; i >= 0; i--) {
 			if (bordersVisible === 1) {
 				article[i].style.borderStyle = "hidden";
 			} else {
-				article[i].style.border = "1px solid green";
+				article[i].style.borderStyle = "solid";
 			}
 		}
 		if (bordersVisible === 0) {
