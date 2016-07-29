@@ -88,9 +88,9 @@ table tr:nth-child(-n+2) th {
 .circle {
 	position: relative;
 	margin: auto;
-	height: 90%;
-	width: 90%;
-	top: 5%;
+	height: 86%;
+	width: 86%;
+	top: 7%;
 	border-radius: 50%;
 	background-color: #000;
 }
