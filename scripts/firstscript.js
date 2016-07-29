@@ -3,7 +3,8 @@ window.onload = function() {
 	button.onclick = function() {
 		document.getElementById("boringarticle").getElementsByTagName("header")[0].getElementsByTagName("h3")[0].innerHTML = "Fun article";
 	}
-
+	
+	// State variable
 	var bordersVisible = 0;
 
 	document.getElementsByTagName("header")[0].getElementsByTagName("h1")[0].getElementsByTagName("a")[0].onclick = function() {
