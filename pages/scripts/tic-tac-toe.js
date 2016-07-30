@@ -17,9 +17,21 @@ window.onload = function() {
 
 }
 
+var currentPlayer = "cross";
+
 function insertGameElement (cell) {
-	var gameElement = document.createElement("div");
-	gameElement.className = "circle game-element";
-	cell.appendChild(gameElement);
-	cell.removeEventListener("click", function() { insertGameElement(this); }, false);
+	if (cell.innerHTML === "") { 
+		var gameElement = document.createElement("div");
+		gameElement.className = currentPlayer + " game-element";
+		switchPlayer();
+		cell.appendChild(gameElement);
+	}
+}
+
+function switchPlayer () {
+	if (currentPlayer === "cross") {
+		currentPlayer = "circle";
+	} else {
+		currentPlayer = "cross";
+	}
 }
