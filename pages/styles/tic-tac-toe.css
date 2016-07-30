@@ -24,8 +24,6 @@ header {
 	padding-bottom: 80%;
 	position: relative;
 	display: block;
-	background-color: #d086d5;
-	transition: 1s;
 }
 
 @media screen and (min-aspect-ratio: 1/1) {
@@ -149,6 +147,9 @@ table.lrdiagonal:after {
 	height: 5%;
 	top: 47.9%;
 	left: -15%;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
 
@@ -158,6 +159,9 @@ table.rldiagonal:after {
 	height: 5%;
 	top: 47.9%;
 	left: -15%;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 
@@ -188,6 +192,9 @@ table.vertical:after {
 	width: 106%;
 	height: 5%;
 	top: 47.9%;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
 
