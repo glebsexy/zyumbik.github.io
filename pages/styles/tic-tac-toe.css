@@ -4,6 +4,20 @@ body {
 	padding: 0;
 }
 
+header {
+	text-align: center;
+	font-family: "Ubuntu", sans-serif;
+	margin-bottom: 48px;
+}
+
+@media screen and (max-height: 512px) and (min-aspect-ratio: 1/1) {
+	header {
+		visibility: hidden;
+		height: 0;
+		margin: 0;
+	}
+}
+
 #game {
 	margin: auto;
 	width: 80%;
@@ -55,6 +69,63 @@ table tr th:nth-child(-n+2) {
 table tr:nth-child(-n+2) th {
 	border-bottom-color: rgba(0,0,0,.86);
 }
+
+table:after {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #d23020;
+}
+
+ /* Left top to right bottom
+table:after {
+	width: 130%;
+	height: 5%;
+	top: 47.9%;
+	left: -15%;
+	transform: rotate(45deg);
+}*/
+
+/* Top righ to bottom left
+table:after {
+	width: 130%;
+	height: 5%;
+	top: 47.9%;
+	left: -15%;
+	transform: rotate(-45deg);
+}*/
+
+/* Horizontal */
+/*table:after {
+	width: 106%;
+	height: 5%;
+	left: -3%;
+	
+	/* Center */
+	/*top: 47.9%;*/
+
+	/* Top */
+	/*top: 15%;*/
+
+	/* Bottom */
+	/*top: 81%;*/
+/*}*/
+
+/*table:after {
+	width: 106%;
+	height: 5%;
+	top: 47.9%;
+	transform: rotate(90deg);
+
+	/* Center */
+	/*left: -2.56%;*/
+
+	/* Left */
+	/*left: -35.47%;*/
+
+	/* Right */
+	/*left: 30.5%;*/
+/*}*/
 
 .tablecell:hover {
 	cursor: pointer;
