@@ -1,16 +1,6 @@
 window.onload = function() {
-	// var cells = document.getElementsByClassName("cell");
-
-	// Page reload indicator
-	document.getElementById("game").style = "background-color: #ffffff;";
-
 	cells = document.getElementsByClassName("cell");
-
-	// var cross = "<div class=\"cross game-element\"></div>";
-	// var circle = "<div class=\"circle game-element\"></div>";
-
 	setupField();
-
 };
 
 var cells, currentPlayer, gameState, gameProcess, wins = [0, 0];
@@ -120,6 +110,6 @@ function determineWinner (winner) {
 		return false;
 	}
 	gameProcess = 9;
-	alert("X: " + wins[0] + "\nO: " + wins[1]);
+	document.getElementById("main-text").innerHTML = "X: " + wins[0] + " O: " + wins[1];
 	return true;
 }
