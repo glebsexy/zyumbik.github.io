@@ -10,12 +10,16 @@ window.onload = function() {
 	// var circle = "<div class=\"circle game-element\"></div>";
 
 	for (var i = 0; i < cells.length; i++) {
-		cells[i].onclick = function() {
-			var cell = document.getElementById(this.id);
-			var gameElement = document.createElement("div");
-			gameElement.className = "circle game-element";
-			cell.appendChild(gameElement);
-		};
-	};
+		(function() {
+			cells[i].addEventListener("click", function() { insertGameElement(this); }, false);
+		}());
+	}
 
+}
+
+function insertGameElement (cell) {
+	var gameElement = document.createElement("div");
+	gameElement.className = "circle game-element";
+	cell.appendChild(gameElement);
+	cell.removeEventListener("click", function() { insertGameElement(this); }, false);
 }
