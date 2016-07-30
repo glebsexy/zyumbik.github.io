@@ -70,63 +70,6 @@ table tr:nth-child(-n+2) th {
 	border-bottom-color: rgba(0,0,0,.86);
 }
 
-table:after {
-	content: "";
-	display: block;
-	position: absolute;
-	background-color: #d23020;
-}
-
- /* Left top to right bottom
-table:after {
-	width: 130%;
-	height: 5%;
-	top: 47.9%;
-	left: -15%;
-	transform: rotate(45deg);
-}*/
-
-/* Top righ to bottom left
-table:after {
-	width: 130%;
-	height: 5%;
-	top: 47.9%;
-	left: -15%;
-	transform: rotate(-45deg);
-}*/
-
-/* Horizontal */
-/*table:after {
-	width: 106%;
-	height: 5%;
-	left: -3%;
-	
-	/* Center */
-	/*top: 47.9%;*/
-
-	/* Top */
-	/*top: 15%;*/
-
-	/* Bottom */
-	/*top: 81%;*/
-/*}*/
-
-/*table:after {
-	width: 106%;
-	height: 5%;
-	top: 47.9%;
-	transform: rotate(90deg);
-
-	/* Center */
-	/*left: -2.56%;*/
-
-	/* Left */
-	/*left: -35.47%;*/
-
-	/* Right */
-	/*left: 30.5%;*/
-/*}*/
-
 .tablecell:hover {
 	cursor: pointer;
 	background-color: #fcfcfc;
@@ -191,5 +134,76 @@ table:after {
 	background-color: #ffffff;
 }
 
+
+/* CSS for the win! */
+table:after {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #d23020;
+}
+
+ /* Left top to right bottom */
+table.lrdiagonal:after {
+	width: 130%;
+	height: 5%;
+	top: 47.9%;
+	left: -15%;
+	transform: rotate(45deg);
+}
+
+/* Top right to bottom left */
+table.rldiagonal:after {
+	width: 130%;
+	height: 5%;
+	top: 47.9%;
+	left: -15%;
+	transform: rotate(-45deg);
+}
+
+/* Horizontal */
+table.horizontal:after {
+	width: 106%;
+	height: 5%;
+	left: -3%;
+}
+
+table.horizontal.center:after {
+	/* Center */
+	top: 47.9%;
+}
+
+table.horizontal.top:after {
+	/* Top */
+	top: 15%;
+}
+
+table.horizontal.bottom:after {
+	/* Bottom */
+	top: 81%;
+}
+
+/* Vertical */
+table.vertical:after {
+	width: 106%;
+	height: 5%;
+	top: 47.9%;
+	transform: rotate(90deg);
+}
+
+table.vertical.center:after {
+	/* Center */
+	left: -2.56%;
+}
+
+table.vertical.left:after {
+	/* Left */
+	left: -35.47%;
+}
+
+table.vertical.right:after {
+	/* Right */
+	left: 30.5%;
+}
 
 
