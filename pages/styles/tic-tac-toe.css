@@ -10,6 +10,8 @@ body {
 	padding-bottom: 80%;
 	position: relative;
 	display: block;
+	background-color: #d086d5;
+	transition: 1s;
 }
 
 @media screen and (min-aspect-ratio: 1/1) {
