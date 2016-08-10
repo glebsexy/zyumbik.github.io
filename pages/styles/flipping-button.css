@@ -1,8 +1,45 @@
+@keyframes flipper {
+	from {
+		transform: rotateX(0);
+		-webkit-transform: rotateX(0);
+	}
+	to {
+		transform: rotateX(360deg);
+		-webkit-transform: rotateX(360deg);
+	}
+}
+
 body {
 	margin: 0;
 	padding: 0;
 }
 
+.button {
+	position: absolute;
+	height: 10%;
+	width: 30%;
+	font-size: 24pt;
+	top: 45%;
+	right: 35%;
+	background-color: #a366a7;
+	color: #FFFFFF;
+	border: none;
+	outline: none;
+}
 
+.button:hover {
+	background-color: #1f3a3d;
+}
+
+@media screen and (max-width: 500px) {
+	.button {
+		font-size: 16pt;
+	}
+}
+
+.flipping {
+	-webkit-animation: flipper .8s infinite linear;
+    animation: flipper .8s infinite linear;	
+}
 
 
