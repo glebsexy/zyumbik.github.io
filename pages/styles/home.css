@@ -1,0 +1,55 @@
+body, html{
+	height: 100%;
+	margin: 0;
+}
+
+.parallax1{
+	
+	background-image: url(img/children.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+.parallax2{
+	background-image: url(img/children1.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 80%;
+}
+.animation_gif{
+	background-image: url(img/ch2.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 60%;
+}
+
+ul {
+	font-family: 'Raleway', sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+}
+li a:hover{
+	color: black;
+	background-color: white;
+}
