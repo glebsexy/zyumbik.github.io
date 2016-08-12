@@ -11,12 +11,14 @@ window.onload = function() {
 var counter = 0;
 
 function addPhoto (container) {
-	var img = document.createElement("img");
-	img.src = "https://source.unsplash.com/random/" + counter++;
-	img.onload = function() {
-		addPhoto(container);
-		container.appendChild(img);
-	};
+	if (counter < 51) {
+		var img = document.createElement("img");
+		img.src = "https://source.unsplash.com/random/" + counter++;
+		img.onload = function() {
+			addPhoto(container);
+			container.appendChild(img);
+		};
+	}
 }
 
 function changeMenuIcon(z){
