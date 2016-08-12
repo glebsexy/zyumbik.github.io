@@ -3,9 +3,28 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles/photo-tiles.css">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Cinzel&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<title></title>
 </head>
 <body>
-
+    <div class="menu-icon" onclick="changeMenuIcon(this)">
+    	<div class="line1"></div>
+    	<div class="line2"></div>
+    	<div class="line3"></div>
+    </div>
+    <div id="menu" class="sidenav">
+    	<nav>
+    	   <ul class="sidenavMen">
+    	        <li role="menuitem"><a href="#">WWW</a></li>
+    	        <li role="menuitem"><a href="#">WWW</a></li>
+                <li role="menuitem" ><a href="#">EEe</a></li>
+           </ul>
+        </nav>
+    </div>
+<script type="text/javascript">
+	function changeMenuIcon(z){
+         z.classList.toggle("change");
+	}
+</script>
 </body>
 </html>
