@@ -63,8 +63,39 @@ li a {
 	text-decoration: none;
 }
 
-.photos > img {
+.photos {
+
+}
+
+.image {
+	display: inline-block;
 	margin: 0;
-	width: 33%;
+}
+
+.image > img {
+	width: 100%;
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
+	.photos {
+		width: 99vw;
+		margin: auto;
+	}
+
+	.image {
+		display: inline-block;
+		width: 33vw;
+		height: 33vw;
+		overflow: hidden;
+		align-content: center;
+	}
+
+	.image > img {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		width: unset;
+		height: 100%;
+	}
 }
 
