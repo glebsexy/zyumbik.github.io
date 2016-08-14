@@ -26,4 +26,5 @@ function addPhoto (container) {
 
 function changeMenuIcon (z){
 	z.classList.toggle("change");
+	document.getElementById("menu").classList.toggle("hidden");
 }
