@@ -9,7 +9,7 @@ window.onload = function() {
 var counter = 0;
 
 function addPhoto (container) {
-	if (counter < 51) {
+	if (counter < 6) {
 		var div = document.createElement("div");
 		div.className = "image";
 		var img = new Image();
