@@ -9,6 +9,7 @@ body {
 	position: fixed;
 	top: 0;
 	right: 0;
+	z-index: 5;
 }
 
 /* Menu Icon */
@@ -103,7 +104,7 @@ body {
 
 /* Page main content */
 .photos {
-
+	z-index: 1;
 }
 
 .image {
