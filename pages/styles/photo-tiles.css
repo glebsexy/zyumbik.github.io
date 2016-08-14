@@ -149,14 +149,14 @@ body {
 
 @media screen and (min-aspect-ratio: 1/1) {
 	.photos {
-		width: 99%;
+		width: 96%;
 		margin: auto;
 	}
 
 	.image {
 		display: inline-block;
-		width: 33vw;
-		height: 33vw;
+		width: 32vw;
+		height: 32vw;
 		overflow: hidden;
 		align-content: center;
 	}
