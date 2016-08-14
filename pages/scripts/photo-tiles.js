@@ -6,17 +6,18 @@ window.onload = function() {
 	};
 };
 
-var counter = 0;
+var counter = 1;
 
 function addPhoto (container) {
 	if (counter < 6) {
 		var div = document.createElement("div");
 		div.className = "image";
 		var img = new Image();
-		img.src = "https://source.unsplash.com/random/" + counter++;
+		img.src = "https://source.unsplash.com/random/" + (+new Date());
 		img.onload = function() {
 			addPhoto(container);
 			if (img.naturalHeight < img.naturalWidth) {
+				counter++;
 				div.appendChild(img);
 				container.appendChild(div);
 			}
