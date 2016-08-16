@@ -136,10 +136,13 @@ body {
 /* Page main content */
 .photos {
 	z-index: 1;
+	/* To remove spaces between elements: */
+	font-size: 0;
+	white-space: nowrap;
 }
 
 .image {
-	display: inline-block;
+	display: block;
 	margin: 0;
 }
 
@@ -149,16 +152,21 @@ body {
 
 @media screen and (min-aspect-ratio: 1/1) {
 	.photos {
-		width: 99%;
-		margin: auto;
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+
+	.column {
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
 	}
 
 	.image {
-		display: inline-block;
-		width: 33%;
-		height: 33vw;
+		position: relative;
+		width: 50vh;
+		height: 50vh;
 		overflow: hidden;
-		align-content: center;
 	}
 
 	.image > img {
@@ -168,5 +176,6 @@ body {
 		width: unset;
 		height: 100%;
 	}
+
 }
 

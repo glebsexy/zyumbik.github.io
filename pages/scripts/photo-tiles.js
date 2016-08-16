@@ -6,7 +6,8 @@ window.onload = function() {
 	};
 };
 
-var counter = 1;
+var counter = 0;
+var column;
 
 function addPhoto (container) {
 	if (counter < 9) {
@@ -19,7 +20,16 @@ function addPhoto (container) {
 			if (img.naturalHeight < img.naturalWidth) {
 				counter++;
 				div.appendChild(img);
-				container.appendChild(div);
+				if (counter % 2 !== 0) {
+					column = document.createElement("div");
+					column.className = "column";
+					column.appendChild(div)
+					container.appendChild(column);
+				} else {
+					var br = document.createElement("br");
+					column.appendChild(br);
+					column.appendChild(div);
+				}
 			}
 		};
 	}
