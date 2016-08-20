@@ -4,6 +4,12 @@ body {
 	background-color: #0D0D0D;/*rgb(13,13,13)*/
 }
 
+img {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
 /* Sidebar */
 #sidebar {
 	position: fixed;
