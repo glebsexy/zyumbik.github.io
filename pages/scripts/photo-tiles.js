@@ -43,13 +43,11 @@ function changeMenuIcon (z){
 	document.getElementById("menu").classList.toggle("hidden");
 }
 
-var curYPos = 0,
-curXPos = 0,
-curDown = false;
+var curYPos = 0, curXPos = 0, curDown = false;
 
 window.addEventListener('mousemove', function(e){ 
 	if(curDown === true){
-		window.scrollTo(document.body.scrollLeft + (curXPos - e.pageX), document.body.scrollTop + (curYPos - e.pageY));
+		window.scrollBy(curXPos - e.pageX, curYPos - e.pageY);
 	}
 });
 
