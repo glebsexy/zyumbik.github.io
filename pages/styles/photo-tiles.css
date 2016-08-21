@@ -166,7 +166,7 @@ img {
 	}
 
 	.image {
-		display: inline-block;
+		display: block;
 		position: relative;
 		width: 50vh;
 		height: 50vh;

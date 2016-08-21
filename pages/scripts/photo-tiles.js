@@ -25,8 +25,6 @@ function addPhoto (container) {
 					column.appendChild(div)
 					container.appendChild(column);
 				} else {
-					var br = document.createElement("br");
-					column.appendChild(br);
 					column.appendChild(div);
 				}
 			}
