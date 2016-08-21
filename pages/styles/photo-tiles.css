@@ -158,7 +158,7 @@ img {
 }
 
 @media screen and (min-aspect-ratio: 1/1) {
-	
+
 	.column {
 		display: inline-block;
 		position: relative;
@@ -166,6 +166,7 @@ img {
 	}
 
 	.image {
+		display: inline-block;
 		position: relative;
 		width: 50vh;
 		height: 50vh;
