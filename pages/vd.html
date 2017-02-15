@@ -1,0 +1,31 @@
+<html>
+	<script type="text/javascript">
+		function whatisit() {
+			var canvas = document.getElementById('canvas');
+			if (canvas.getContext) {
+				var stool = canvas.getContext('2d');
+				stool.fillStyle = "RED";
+				stool.beginPath();
+				stool.moveTo(75, 40);
+				stool.bezierCurveTo(75, 37, 70, 25, 50, 25);
+				stool.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+				stool.bezierCurveTo(20, 80, 40, 102, 75, 120);
+				stool.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+				stool.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+				stool.bezierCurveTo(85, 25, 75, 37, 75, 40);
+				stool.fill();
+			}
+		}
+	</script>
+	<style type="text/css">
+		body {
+			text-shadow: 2px 2px gray;
+			font-size: 30px;
+		}
+	</style>
+	<body onload="whatisit();">
+		<canvas id="canvas" width="150" height="130"></canvas>
+		<p>01001001 00111100 00110011 01111001 01101111 01110101</p>
+		<p>I<3you</p>
+	</body>
+</html>
