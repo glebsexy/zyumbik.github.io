@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rubber Ducky</title>
+	<link rel="stylesheet" href="styles/ducky.css">
+</head>
+<body>
+	<div class="header full-width">
+		<h1>Rubber Ducky</h1>
+		<p>Your helper in any tough situation. Just explain your problem, and you will find a solution!</p>
+	</div>
+	<div class="mid-width">
+		<div class="card">
+			<div class="description">
+				<h2>What is it?</h2>
+				<p>Rubber Ducky is your helper in any tough situation. Are you desperate for a solution to your problem? Searching for an answer for a long time? Lost in a huge amount of information? You probably haven't tried talking to Rubber Ducky! Just explain your problem in detail... and you will find a solution! Magic? No. It's Rubber Ducky!</p>
+				<h2>How to use it?</h2>
+				<ul>
+					<li>Be as specific as possible, or Ducky might not understand you.</li>
+					<li>Don’t leave out details, even the sensitive ones. This duck’s memory is not very good anyway.</li>
+					<li>Talk to Ducky like a human would talk to a human. Ducks have feelings too!</li>
+					<li>While explaining your problem, you will definitely find some useful insights.</li>
+					<li>While reading through your writing, you might even find a complete solution.</li>
+					<li>If nothing still comes to your mind, you can go to a walk and then return to your problem with the fresh head. All your notes will be saved.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="screenshots full-width">
+		<h2>Screenshots</h2>
+		<div class="slides">
+			<img class="slide" src="img/screenshot-1.png" alt="Screenshot 1">
+			<img class="slide" src="img/screenshot-2.png" alt="Screenshot 2">
+			<img class="slide" src="img/screenshot-3.png" alt="Screenshot 3">
+			<div class="buttons">
+				<div class="button-area" onclick="showImage(0)"><span class="button-dot"></span></div>
+				<div class="button-area" onclick="showImage(1)"><span class="button-dot"></span></div>
+				<div class="button-area" onclick="showImage(2)"><span class="button-dot"></span></div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom full-width"></div>
+	<div class="credits"></div>
+
+	<script>
+		var slideIndex = 0;
+		showImage(slideIndex);
+
+		function showImage(n) {
+			slideIndex = n;
+			var slides = document.getElementsByClassName('slide');
+			var dots = document.getElementsByClassName('button-dot');
+			for (var i = 0; i < dots.length; i++) {
+				dots[i].classList.remove('selected');
+				slides[i].classList.remove('selected');
+			}
+			slides[slideIndex].classList.add('selected');  
+			dots[slideIndex].classList.add('selected');
+		}
+	</script>
+
+</body>
+</html>
