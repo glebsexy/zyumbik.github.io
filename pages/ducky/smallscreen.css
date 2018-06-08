@@ -1,0 +1,80 @@
+/* Style for screens less than 500px in width */
+
+body > div {
+	margin: 64px 0;
+}
+
+p, li {
+	line-height: 20pt;
+	font-size: 14pt;
+}
+
+h1 {
+	font-size: 36pt;
+	margin-bottom: 8px;
+}
+
+h2, h3 {
+	margin: 16px 16px;
+}
+
+.button-add {
+	font-size: 14pt;
+}
+
+.button-container {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+#button-add-1 {
+	display: none;
+}
+
+.header p {
+	width: 90%;
+}
+
+.mid-width {
+	padding: 0 8px;
+}
+
+.card {
+	padding: 16px;
+	border-radius: 4px;
+}
+
+.slides h2 {
+	margin: 16px;
+}
+
+.slides > .slide {
+	padding: 0;
+}
+
+.slides > .buttons {
+	display: block;
+	position: relative;
+	bottom: unset;
+	left: unset;
+	margin: 16px auto;
+	width: 100%;
+}
+
+.button-dot {
+	background: transparent;
+}
+
+
+
+@media only screen and (max-width: 360px) {
+	
+	p, li {
+		line-height: 18pt;
+		font-size: 12pt;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+}

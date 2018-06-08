@@ -2,19 +2,78 @@
 <html>
 <head>
 	<title>Rubber Ducky</title>
-	<link rel="stylesheet" href="styles/ducky.css">
+	<meta name="description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!"/>
+
+	<meta property="og:image" content="https://zyumbik.github.io/pages/ducky/img/OG-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+
+    <!-- Open Graph tags -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://zyumbik.github.io/pages/ducky"/>
+    <meta property="og:title" content="Rubber Ducky extension by Gleb Sabirzyanov"/>
+    <meta property="og:description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!"/>
+
+    <!-- Google+ tags -->
+    <meta itemprop="name" content="Rubber Ducky extension by Gleb Sabirzyanov">
+    <meta itemprop="description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!">
+    <meta itemprop="image" content="https://zyumbik.github.io/pages/ducky/img/OG-image.png">
+
+    <!-- Twitter tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@glebable">
+    <meta name="twitter:title" content="Rubber Ducky extension">
+    <meta name="twitter:description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!">
+    <meta name="twitter:creator" content="@glebable">
+    <meta name="twitter:image:src" content="https://zyumbik.github.io/pages/ducky/img/Twitter-image.png">
+
+    <!-- Styling -->
+	<link rel="stylesheet" href="ducky/regularscreen.css">
+	<link rel="stylesheet" media="screen and (max-width: 500px)" href="ducky/smallscreen.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+	<!-- Scripts -->
+	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/apdfllckaahabafndbhieahigkjlhalf">
 </head>
 <body>
 	<div class="header full-width">
 		<h1>Rubber Ducky</h1>
 		<p>Your helper in any tough situation. Just explain your problem, and you will find a solution!</p>
 	</div>
+	<div class="button-container full-width">
+		<button onclick="chrome.webstore.install()" class="button-add" id="button-add-1">Add to Chrome</button>
+	</div>
 	<div class="mid-width">
 		<div class="card">
 			<div class="description">
-				<h2>What is it?</h2>
-				<p>Rubber Ducky is your helper in any tough situation. Are you desperate for a solution to your problem? Searching for an answer for a long time? Lost in a huge amount of information? You probably haven't tried talking to Rubber Ducky! Just explain your problem in detail... and you will find a solution! Magic? No. It's Rubber Ducky!</p>
-				<h2>How to use it?</h2>
+				<p>Are you desperate for a solution to your problem? Searching for an answer for a long time? Lost in a huge amount of information? You probably haven't tried talking to Rubber Ducky!</p>
+				<h2>How to use</h2>
+				<ol>
+					<li>Get yourself a difficult problem.</li>
+					<li>Describe it to Rubber Ducky.</li>
+					<li>Now you understand the problem better! Quack!</li>
+					<li>No solution yet? Add details. :)</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div class="screenshots full-width">
+		<div class="slides">
+			<img class="slide" src="ducky/img/screenshot-1.png" alt="Screenshot 1">
+			<img class="slide" src="ducky/img/screenshot-2.png" alt="Screenshot 2">
+			<img class="slide" src="ducky/img/screenshot-3.png" alt="Screenshot 3">
+			<div class="buttons">
+				<div class="button-area" onclick="showImage(0)"><span class="button-dot"></span></div>
+				<div class="button-area" onclick="showImage(1)"><span class="button-dot"></span></div>
+				<div class="button-area" onclick="showImage(2)"><span class="button-dot"></span></div>
+			</div>
+		</div>
+	</div>
+	<div class="mid-width" style="display: none;">
+		<div class="card">
+			<div class="more_info">
+				<h2>Tips</h2>
 				<ul>
 					<li>Be as specific as possible, or Ducky might not understand you.</li>
 					<li>Don’t leave out details, even the sensitive ones. This duck’s memory is not very good anyway.</li>
@@ -26,22 +85,26 @@
 			</div>
 		</div>
 	</div>
-	<div class="screenshots full-width">
-		<h2>Screenshots</h2>
-		<div class="slides">
-			<img class="slide" src="img/screenshot-1.png" alt="Screenshot 1">
-			<img class="slide" src="img/screenshot-2.png" alt="Screenshot 2">
-			<img class="slide" src="img/screenshot-3.png" alt="Screenshot 3">
-			<div class="buttons">
-				<div class="button-area" onclick="showImage(0)"><span class="button-dot"></span></div>
-				<div class="button-area" onclick="showImage(1)"><span class="button-dot"></span></div>
-				<div class="button-area" onclick="showImage(2)"><span class="button-dot"></span></div>
-			</div>
+	<div class="mid-width">
+		<div class="disclamer">
+			<h2>Disclaimer</h2>
+			<p>Rubber Ducky is not a problem solver. It cannot solve problems itself. It just acts as a someone you can <span style="text-decoration: line-through;">quack</span> talk to instead of bothering your colleagues with stupid questions. Remember that you are the problem solver here, so the solution cannot be guaranteed. This method also might not work for all types of problems, especially those that require a collective effort.</p>
 		</div>
+	</div>
+	<div class="button-container full-width">
+		<button onclick="chrome.webstore.install()" class="button-add" id="button-add-2">Add to Chrome</button>
 	</div>
 	<div class="bottom full-width"></div>
 	<div class="credits"></div>
-
+	<script>
+		if (chrome.app.isInstalled) {
+			var buttons = document.getElementsByClassName('button-add');
+			for (var i = 0; i < buttons.length; i++) {
+				buttons[i].innerHTML = 'Thanks for adding!';
+				buttons[i].disabled = true;
+			}
+		}
+	</script>
 	<script>
 		var slideIndex = 0;
 		showImage(slideIndex);
