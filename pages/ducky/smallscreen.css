@@ -14,7 +14,8 @@ h1 {
 	margin-bottom: 8px;
 }
 
-h2, h3 {
+h2 {
+	font-size: 16pt;
 	margin: 16px 16px;
 }
 
@@ -44,12 +45,14 @@ h2, h3 {
 	border-radius: 4px;
 }
 
-.slides h2 {
-	margin: 16px;
+.slides > .slide-container {
+	padding: 0;
 }
 
-.slides > .slide {
+.slide-container > .slide {
 	padding: 0;
+	border-radius: 0;
+	box-shadow: none;
 }
 
 .slides > .buttons {
@@ -57,7 +60,8 @@ h2, h3 {
 	position: relative;
 	bottom: unset;
 	left: unset;
-	margin: 16px auto;
+	margin: 0 auto;
+	padding: 8px 0;
 	width: 100%;
 }
 
@@ -65,7 +69,17 @@ h2, h3 {
 	background: transparent;
 }
 
+.credits {
+	padding: 16px 0;
+}
 
+@media only screen and (max-height: 500px) {
+
+	body > div {
+		margin: 32px 0;
+	}
+
+}
 
 @media only screen and (max-width: 360px) {
 	

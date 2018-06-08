@@ -30,7 +30,7 @@
 
     <!-- Styling -->
 	<link rel="stylesheet" href="ducky/regularscreen.css">
-	<link rel="stylesheet" media="screen and (max-width: 500px)" href="ducky/smallscreen.css">
+	<link rel="stylesheet" media="screen and (max-width: 500px), screen and (max-height: 500px)" href="ducky/smallscreen.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
 
 	<!-- Scripts -->
@@ -60,9 +60,11 @@
 	</div>
 	<div class="screenshots full-width">
 		<div class="slides">
-			<img class="slide" src="ducky/img/screenshot-1.png" alt="Screenshot 1">
-			<img class="slide" src="ducky/img/screenshot-2.png" alt="Screenshot 2">
-			<img class="slide" src="ducky/img/screenshot-3.png" alt="Screenshot 3">
+			<div class="slide-container">
+				<img class="slide" src="ducky/img/screenshot-1.png" alt="Screenshot 1">
+				<img class="slide" src="ducky/img/screenshot-2.png" alt="Screenshot 2">
+				<img class="slide" src="ducky/img/screenshot-3.png" alt="Screenshot 3">
+			</div>
 			<div class="buttons">
 				<div class="button-area" onclick="showImage(0)"><span class="button-dot"></span></div>
 				<div class="button-area" onclick="showImage(1)"><span class="button-dot"></span></div>
@@ -70,7 +72,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="mid-width" style="display: none;">
+	<div class="mid-width" style="/*display: none;*/">
 		<div class="card">
 			<div class="more_info">
 				<h2>Tips</h2>
@@ -82,6 +84,8 @@
 					<li>While reading through your writing, you might even find a complete solution.</li>
 					<li>If nothing still comes to your mind, you can go to a walk and then return to your problem with the fresh head. All your notes will be saved.</li>
 				</ul>
+				<h2>Idea</h2>
+				<p>Rubber Ducky is based on the idea of Rubber duck debugging. It’s a software engineering method of debugging the code by trying to explain it line-by-line to an inanimate object. This method can obviously be used not only in programming but anywhere you could imagine. The key here is to give a thorough description of your problem, question or anything else that is wracking your brain. The Ducky will always be here to help!</p>
 			</div>
 		</div>
 	</div>
@@ -95,7 +99,11 @@
 		<button onclick="chrome.webstore.install()" class="button-add" id="button-add-2">Add to Chrome</button>
 	</div>
 	<div class="bottom full-width"></div>
-	<div class="credits"></div>
+	<div class="credits full-width">
+		<div class="about-me">Made with ❤️ by <a href="https://twitter.com/glebable">Gleb</a>.</div>
+	</div>
+
+
 	<script>
 		if (chrome.app.isInstalled) {
 			var buttons = document.getElementsByClassName('button-add');
