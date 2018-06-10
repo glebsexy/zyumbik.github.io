@@ -73,6 +73,10 @@ h2 {
 	padding: 16px 0;
 }
 
+.random-quacks > .quack {
+	font-size: 48pt;
+}
+
 @media only screen and (max-height: 500px) {
 
 	body > div {

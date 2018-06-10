@@ -3,7 +3,10 @@
 <head>
 	<title>Rubber Ducky</title>
 	<meta name="description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!"/>
-
+	
+	<meta  charsetcharse ="utf-8">
+	
+	<!-- Square image tag -->
 	<meta property="og:image" content="https://zyumbik.github.io/pages/ducky/img/OG-image.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
@@ -37,6 +40,7 @@
 	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/apdfllckaahabafndbhieahigkjlhalf">
 </head>
 <body>
+	<div class="random-quacks"></div>
 	<div class="header full-width">
 		<h1>Rubber Ducky</h1>
 		<p>Your helper in any tough situation. Just explain your problem, and you will find a solution!</p>
@@ -47,13 +51,14 @@
 	<div class="mid-width">
 		<div class="card">
 			<div class="description">
-				<p>Are you desperate for a solution to your problem? Searching for an answer for a long time? Lost in a huge amount of information? You probably haven't tried talking to Rubber Ducky!</p>
-				<h2>How to use</h2>
+				<p>A simple tool based on a powerful problem solving technique for almost all kinds of problems. Can't decide what flavor of &#9749 to pick today? Trying to understand a bug in your code? 🐞 Want to find a way to make your 🚗 autonomous using only a phone? Rubber Ducky might help you.</p>
+				<br>
+				<h2>Method</h2>
 				<ol>
 					<li>Get yourself a difficult problem.</li>
 					<li>Describe it to Rubber Ducky.</li>
 					<li>Now you understand the problem better! Quack!</li>
-					<li>No solution yet? Add details. :)</li>
+					<li>No solution yet? Add details or take a short walk. :)</li>
 				</ol>
 			</div>
 		</div>
@@ -72,7 +77,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="mid-width" style="/*display: none;*/">
+	<div class="mid-width">
 		<div class="card">
 			<div class="more_info">
 				<h2>Tips</h2>
@@ -82,10 +87,12 @@
 					<li>Talk to Ducky like a human would talk to a human. Ducks have feelings too!</li>
 					<li>While explaining your problem, you will definitely find some useful insights.</li>
 					<li>While reading through your writing, you might even find a complete solution.</li>
-					<li>If nothing still comes to your mind, you can go to a walk and then return to your problem with the fresh head. All your notes will be saved.</li>
+					<li>If nothing still comes to your mind, you can go for a walk and then return to your problem with the fresh head. All your notes will be saved.</li>
+					<li>You could also use this extension to make quick notes.</li>
 				</ul>
+				<br>
 				<h2>Idea</h2>
-				<p>Rubber Ducky is based on the idea of Rubber duck debugging. It’s a software engineering method of debugging the code by trying to explain it line-by-line to an inanimate object. This method can obviously be used not only in programming but anywhere you could imagine. The key here is to give a thorough description of your problem, question or anything else that is wracking your brain. The Ducky will always be here to help!</p>
+				<p>Rubber Ducky is based on the idea of <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">rubber duck debugging</a>. It’s a software engineering method of debugging the code by trying to explain it line-by-line to an inanimate object. This method can obviously be used not only in programming but anywhere you could imagine. The key here is to give a thorough description of your problem, question or anything else that is wracking your brain. The Ducky will always be here to help!</p>
 			</div>
 		</div>
 	</div>
@@ -98,11 +105,9 @@
 	<div class="button-container full-width">
 		<button onclick="chrome.webstore.install()" class="button-add" id="button-add-2">Add to Chrome</button>
 	</div>
-	<div class="bottom full-width"></div>
 	<div class="credits full-width">
-		<div class="about-me">Made with ❤️ by <a href="https://twitter.com/glebable">Gleb</a>.</div>
+		<div class="about-me">Made with ❤️ by <a href="https://twitter.com/glebable" class="tooltip">Gleb<span class="tooltip-text">Design & Development</span></a>.<br>Feedback is appreciated.</div>
 	</div>
-
 
 	<script>
 		if (chrome.app.isInstalled) {
@@ -130,5 +135,23 @@
 		}
 	</script>
 
+	<script>
+		setTimeout(function () {
+			var container = document.getElementsByClassName('random-quacks')[0];
+			var body = document.getElementsByTagName('body')[0];
+			var bodyStyle = window.getComputedStyle(body);
+			var bodyHeight = parseInt(bodyStyle.height);
+			var bodyWidth = parseInt(bodyStyle.width);
+			for (var i = 0; i <= bodyHeight; i += 150) {
+				var leftPos = Math.floor(Math.random() * (bodyWidth * 2 + 300) - 150);
+				var topPos = Math.floor(Math.random() * 20 + i);
+				var quack = document.createElement('DIV');
+				quack.setAttribute('style', 'top: ' + topPos + 'px; left: ' + leftPos + 'px;');
+				quack.innerHTML = 'Quack';
+				quack.classList.add('quack');
+				container.appendChild(quack);
+			}
+		}, 100);
+	</script>
 </body>
 </html>

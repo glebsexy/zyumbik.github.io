@@ -80,7 +80,7 @@ h2 {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	max-width: 700px;
+	max-width: 800px;
 	box-sizing: border-box;
 	padding: 0 16px;
 	margin-left: auto;
@@ -105,8 +105,8 @@ ul {
 
 ul li {
 	position: relative;
-	margin-bottom: 8px;
-	line-height: 1.30em;
+	margin-bottom: 10pt;
+	line-height: 22pt;
 }
 
 ul li:before {
@@ -114,11 +114,11 @@ ul li:before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 12px;
-  height: 3px;
-  background: #FF9100;
-  margin-left: -24px;
-  margin-top: 0.55em; /* Half of the line height size */
+  width: 16px;
+  height: 4px;
+  background: #232323;
+  margin-left: -32px;
+  margin-top: 10pt; /* To roughly center in line height */
 }
 
 .button-container {
@@ -133,17 +133,15 @@ ul li:before {
 	text-transform: uppercase;
 	padding: 12px 24px;
 
-	/* width: 10em; */
-	/* height: 2em; */
-
 	color: #FFD600;
 	background: #000000;
-	transition: box-shadow 0.2s;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24), 0 4px 12px 0 rgba(0, 0, 0, 0.12);
 	border: none;
 	border-radius: 4px;
 	margin: 0 auto;
 	outline: 0;
+	
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24), 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+	transition: box-shadow 0.2s;
 }
 
 .button-add:hover {
@@ -156,12 +154,7 @@ ul li:before {
 	background: #303030;
 	box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
 }
-/* 
-.screenshots {
-	background: #FFC400;
-	padding: 16px 0;
-}
- */
+
 .slides {
 	display: block;
 	position: relative;
@@ -210,7 +203,7 @@ ul li:before {
 	border-radius: 50%;
 	padding: 0;
 	display: block;
-	background: #ffffff;
+	background: #FFFFFF;
 }
 
 .button-area:hover > .button-dot {
@@ -241,8 +234,55 @@ ul li:before {
 	padding: 32px 0;
 }
 
+.tooltip {
+	position: relative;
+}
 
+.tooltip > .tooltip-text {
+	visibility: hidden;
+    position: absolute;
+	top: -180%;
+	left: 50%;
+	transform: translateX(-50%);
 
+	white-space: nowrap;
+	background: #000000DE;
+	color: #FFD600;
+	text-transform: uppercase;
+
+	padding: 0 16px;
+	border-radius: 4px;
+	font-size: 12pt;
+	line-height: 28pt;
+}
+
+.tooltip:hover > .tooltip-text {
+	visibility: visible
+}
+
+.tooltip > .tooltip-text:after {
+	content: " ";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -6px;
+	border-width: 6px;
+	border-style: solid;
+	border-color: #000000DE transparent transparent transparent;
+}
+
+.random-quacks {
+	z-index: -1;
+	position: fixed;
+	color: #FFC400;
+	margin: 0;
+}
+
+.random-quacks > .quack {
+	font-size: 64pt;
+	font-weight: 900;
+	position: absolute;
+}
 
 
 
