@@ -34,12 +34,12 @@ a:visited {
 	color: #FF6E40;
 }
 
-a:hover {
+a:hover, a:focus {
 	color: #DD2C00;
 }
 
-a:focus, a:active {
-	color: #FF9E80;
+a:active {
+	color: #FF1744;
 }
 
 h1 {
