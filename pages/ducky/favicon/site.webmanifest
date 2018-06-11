@@ -1,0 +1,19 @@
+{
+    "name": "Rubber Ducky",
+    "short_name": "Rubber Ducky",
+    "icons": [
+        {
+            "src": "/ducky/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/ducky/favicon/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffc400",
+    "background_color": "#ffc400",
+    "display": "standalone"
+}
