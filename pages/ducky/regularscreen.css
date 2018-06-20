@@ -58,6 +58,12 @@ h2 {
 	letter-spacing: .04em;
 }
 
+h3 {
+	font-size: 18pt;
+	padding: 0;
+	margin: 24px 24px;
+}
+
 ul {
 	list-style-type: none;
 }
@@ -80,9 +86,28 @@ ul li::before {
 	margin-top: 10pt; /* To roughly center in line height */
 }
 
+span.line {
+	display: inline-block;
+}
+
 .full-height {
 	height: 100vh;
 }
+
+/* COMPONENTS */
+
+.separator {
+	height: 4px;
+	width: 60%;
+	background: #FFC400;
+	margin: 6vh auto !important;
+}
+
+.separator.small {
+	max-width: 450px;
+}
+
+/* HEADER SECTION */
 
 #section-header {
 	display: flex;
@@ -92,7 +117,7 @@ ul li::before {
 	overflow: hidden;
 }
 
-.random-quacks {
+#section-header .random-quacks {
 	z-index: -10;
 	position: absolute;
 	color: #FFC400;
@@ -105,19 +130,19 @@ ul li::before {
 	overflow: hidden;
 }
 
-.random-quacks > .quack {
+#section-header .random-quacks > .quack {
 	font-size: 64pt;
 	font-weight: 900;
 	position: absolute;
 }
 
-.header-top {
+#section-header .header-top {
 	width: 100%;
 	text-align: center;
 	background: #FFC400;
 }
 
-.header-top > h2 {
+#section-header .header-top > h2 {
 	font-size: 24pt;
 	line-height: 36pt;
 	margin: 0;
@@ -125,7 +150,7 @@ ul li::before {
 	padding: 16px;
 }
 
-.header-center > h2 {
+#section-header .header-center > h2 {
 	position: relative;
 	width: 700px;
 	max-width: 90%;
@@ -135,15 +160,17 @@ ul li::before {
 	text-transform: none;
 }
 
-.header-ducky {
+#section-header .header-ducky {
 	padding: 16px 0;
 }
 
-.header-ducky > img {
+#section-header .header-ducky > img {
 	min-width: 128px;
 	width: 20vw;
 	max-width: 192px;
 }
+
+/* HOWTO SECTION */
 
 #section-howto {
 	display: flex;
@@ -157,48 +184,42 @@ ul li::before {
 
 #section-howto > .howto-title {
 	font-size: 24pt;
+	text-align: center;
 }
 
-.separator {
-	height: 4px;
-	width: 60%;
-	background: #FFC400;
-	margin: 6vh auto !important;
-}
-
-.separator.small {
-	max-width: 450px;
-}
-
-.howto-questions {
+#section-howto .howto-questions {
 	height: 0;
 	position: relative;
 	width: 80%;
 }
 
-.howto-question {
+#section-howto .howto-question {
 	font-size: 20pt;
 	line-height: 32pt;
 	position: absolute;
 	top: 0;
 	left: 50%;
 	width: 100%;
-	transform: translate(-50%, -48px) scale(.9, .9);
+	transform: translate(-50%, -48px) scale(.8);
 	text-align: center;
 	height: 0;
 	opacity: 0;
 	transition: opacity .5s, transform 1s step-start 1s;
 }
 
-.howto-question.visible {
+#section-howto .howto-question.visible {
 	height: 100%;
 	opacity: 1;
-	transform: translate(-50%, 0) scale(1, 1);
-	transition: opacity 1s ease-in .1s, 
-		transform 1s ease-out 0s;
+	transform: translate(-50%, 0) scale(1);
+	transition: opacity 1s steps(5, start) 0s, 
+		transform 1s steps(5) 0s;
 }
 
-li.howto-item::before {
+#section-howto .howto-list {
+	margin: 0 16px;
+}
+
+#section-howto li.howto-item::before {
 	width: 24px;
 	height: 24px;
 	margin-left: -40px;
@@ -206,12 +227,66 @@ li.howto-item::before {
 	background: url('icn/outline-check_box_outline_blank-24px.svg');
 }
 
-li.howto-item.checked::before {
+#section-howto li.howto-item.checked::before {
 	background: url('icn/outline-check_box-24px.svg');
 }
 
-li.howto-item::before:active {
-	background: url('icn/outline-check_box-24px.svg');
+/* FEATURES SECTION */
+
+#section-features {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	max-width: 700px;
+	min-height: 60vh;
+	margin: 0 auto;
+}
+
+#section-features h2 {
+	margin: 0;
+	margin-bottom: 64px;
+	font-size: 48pt;
+}
+
+#section-features > div {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 0 32px;
+}
+
+#section-features > div:first-child {
+	/* align-self: flex-start; */
+}
+
+#section-features > div:last-child {
+	/* align-self: flex-end; */
+	/* margin-top: 25vh; */
+}
+
+#section-features .feature-header {
+	margin: 0;
+	position: relative;
+	display: inline;
+	letter-spacing: .03em;
+}
+
+#section-features .feature-header::after {
+	content: '';
+	position: absolute;
+	height: 10px;
+	bottom: 2px;
+	left: -2%;
+	right: -2%;
+	background: #FFD600;
+	z-index: -1;
+}
+
+#section-features .feature-description {
+	margin: 8px 0 32px 0;
+	font-size: 14pt;
 }
 
 /* Old CSS */
