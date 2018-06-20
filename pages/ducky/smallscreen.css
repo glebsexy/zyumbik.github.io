@@ -28,13 +28,13 @@ h2 {
 	margin-bottom: 16px;
 }
 
-#button-add-1 {
-	display: none;
+.howto-question {
+	font-size: 16pt;
+	line-height: 20pt;
 }
 
-.header p {
-	width: 90%;
-}
+/*  Old style */
+
 
 .mid-width {
 	padding: 0 8px;

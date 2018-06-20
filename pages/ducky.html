@@ -20,30 +20,30 @@
 
 	<!-- Square image tag -->
 	<meta property="og:image" content="ducky/img/OG-image.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="1200">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="1200">
 
-    <!-- Open Graph tags -->
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://zyumbik.github.io/pages/ducky"/>
-    <meta property="og:title" content="Rubber Ducky extension by Gleb Sabirzyanov"/>
-    <meta property="og:description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!"/>
+	<!-- Open Graph tags -->
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://zyumbik.github.io/pages/ducky"/>
+	<meta property="og:title" content="Rubber Ducky extension by Gleb Sabirzyanov"/>
+	<meta property="og:description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!"/>
 
-    <!-- Google+ tags -->
-    <meta itemprop="name" content="Rubber Ducky extension by Gleb Sabirzyanov">
-    <meta itemprop="description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!">
-    <meta itemprop="image" content="ducky/img/OG-image.png">
+	<!-- Google+ tags -->
+	<meta itemprop="name" content="Rubber Ducky extension by Gleb Sabirzyanov">
+	<meta itemprop="description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!">
+	<meta itemprop="image" content="ducky/img/OG-image.png">
 
-    <!-- Twitter tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@glebable">
-    <meta name="twitter:title" content="Rubber Ducky extension">
-    <meta name="twitter:description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!">
-    <meta name="twitter:creator" content="@glebable">
-    <meta name="twitter:image:src" content="https://zyumbik.github.io/pages/ducky/img/Twitter-image.png">
+	<!-- Twitter tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@glebable">
+	<meta name="twitter:title" content="Rubber Ducky extension">
+	<meta name="twitter:description" content="Your helper in any tough situation. Just explain your problem, and you will find a solution!">
+	<meta name="twitter:creator" content="@glebable">
+	<meta name="twitter:image:src" content="https://zyumbik.github.io/pages/ducky/img/Twitter-image.png">
 
-    <!-- Styling -->
+	<!-- Styling -->
 	<link rel="stylesheet" href="ducky/regularscreen.css">
 	<link rel="stylesheet" media="screen and (max-width: 500px), screen and (max-height: 500px)" href="ducky/smallscreen.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,30 +52,74 @@
 	<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/apdfllckaahabafndbhieahigkjlhalf">
 </head>
 <body>
-	<div class="random-quacks"></div>
-	<div class="header full-width">
-		<h1>Rubber Ducky</h1>
-		<p>Your helper in any tough situation. Just explain your problem, and you will find a solution!</p>
-	</div>
-	<div class="button-container full-width">
-		<button onclick="chrome.webstore.install()" class="button-add" id="button-add-1">Add to Chrome</button>
-	</div>
-	<div class="mid-width">
-		<div class="card">
-			<div class="description">
-				<p>A simple tool based on a powerful problem solving technique for almost all kinds of problems. Can't decide what flavor of &#9749 to pick today? Trying to understand a bug in your code? 🐞 Want to find a way to make your 🚗 autonomous using only a phone? Rubber Ducky might help you.</p>
-				<br>
-				<h2>Method</h2>
-				<ol>
-					<li>Get yourself a difficult problem.</li>
-					<li>Describe it to Rubber Ducky.</li>
-					<li>Now you understand the problem better! Quack!</li>
-					<li>No solution yet? Add details or take a short walk. :)</li>
-				</ol>
+	<section class='full-height' id="section-header">
+		<div class="random-quacks"></div>
+		<div class="header-top">
+			<h2>Rubber Ducky</h2>
+		</div>
+		<div class="header-center">
+			<h1 class="header-main">Solve problems,<br><i>quick!</i></h1>
+			<h2 class="header-subhead">A psychology-based technique that keeps you focused and conscious to find solutions faster.</h2>
+		</div>
+		<div class="header-ducky"><img src="ducky/img/ducky-duck.svg" alt="Rubber Ducky picture" draggable="false"></div>
+	</section>
+
+	<section id="section-howto">
+		<div class="howto-questions">
+			<div class="howto-question">Can't decide what flavor of coffee to pick today? <span class="emoji">&#9749</span></div>
+			<div class="howto-question">Trying to understand a bug in your code? <span class="emoji">🐞</span></div>
+			<div class="howto-question">Want to find a way to make your car autonomous? <span class="emoji">🚗</span></div>
+			<div class="howto-question">Can't figure out how to use a new gadget? <span class="emoji">📱</span></div>
+		</div>
+		<div class="separator small"></div>
+		<h2 class="howto-title">Talk to Rubber Ducky!</h2>
+		<div class="howto-list-container">
+			<ul class="howto-list">
+				<li class="howto-item checked">Get yourself a difficult problem.</li>
+				<li class="howto-item">Explain it in detail to Rubber Ducky.</li>
+				<li class="howto-item">Now you understand the problem better! Quack!</li>
+				<li class="howto-item">No solution yet? Take a short walk. :)</li>
+			</ul>
+		</div>
+		<div class="button-container full-width">
+			<button onclick="chrome.webstore.install()" class="button-add" id="button-add-1">Add to Chrome</button>
+		</div>
+	</section>
+
+	<section id="section-features">
+		<div class="features-can">
+			<h2>Can</h2>
+			<div class="feature">
+				<h3 class="feature-header">Listen attentively</h3>
+				<p class="feature-description"></p>
+			</div>
+			<div class="feature">
+				<h3 class="feature-header">Save your thoughts</h3>
+				<p class="feature-description"></p>
+			</div>
+			<div class="feature">
+				<h3 class="feature-header">Quack</h3>
+				<p class="feature-description"></p>
 			</div>
 		</div>
-	</div>
-	<div class="screenshots full-width">
+		<div class="features-cannot">
+			<h2>Can't</h2>
+			<div class="feature">
+				<h3 class="feature-header">Propose solutions</h3>
+				<p class="feature-description"></p>
+			</div>
+			<div class="feature">
+				<h3 class="feature-header">Give answers</h3>
+				<p class="feature-description"></p>
+			</div>
+			<div class="feature">
+				<h3 class="feature-header">Understand you</h3>
+				<p class="feature-description"></p>
+			</div>
+		</div>
+	</section>
+
+	<section id="section-screenshots">
 		<div class="slides">
 			<div class="slide-container">
 				<img class="slide" src="ducky/img/screenshot-1.png" alt="Screenshot 1">
@@ -88,38 +132,17 @@
 				<div class="button-area" onclick="showImage(2)"><span class="button-dot"></span></div>
 			</div>
 		</div>
-	</div>
-	<div class="mid-width">
-		<div class="card">
-			<div class="more_info">
-				<h2>Tips</h2>
-				<ul>
-					<li>Be as specific as possible, or Ducky might not understand you.</li>
-					<li>Don’t leave out details, even the sensitive ones. This duck’s memory is not very good anyway.</li>
-					<li>Talk to Ducky like a human would talk to a human. Ducks have feelings too!</li>
-					<li>While explaining your problem, you will definitely find some useful insights.</li>
-					<li>While reading through your writing, you might even find a complete solution.</li>
-					<li>If nothing still comes to your mind, you can go for a walk and then return to your problem with the fresh head. All your notes will be saved.</li>
-					<li>You could also use this extension to make quick notes.</li>
-				</ul>
-				<br>
-				<h2>Idea</h2>
-				<p>Rubber Ducky is based on the idea of <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank" title="Wikipedia: Rubber duck debugging">rubber duck debugging</a>. It’s a software engineering method of debugging the code by trying to explain it line-by-line to an inanimate object. This method can obviously be used not only in programming but anywhere you could imagine. The key here is to give a thorough description of your problem, question or anything else that is wracking your brain. The Ducky will always be here to help!</p>
-			</div>
+	</section>
+
+	<section id="section-details">
+		<div class="about">
+			<h2>About</h2>
+			<p>Rubber Ducky is based on the idea of <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank" title="Wikipedia: Rubber duck debugging">rubber duck debugging</a>. It’s a software engineering method of debugging the code by trying to explain it line-by-line to an inanimate object. This method can obviously be used not only in programming but anywhere you could imagine. The key here is to give a thorough description of your problem, question or anything else that is wracking your brain. You can read about <a href="http://pressupinc.com/blog/2014/06/psychology-underlying-power-rubber-duck-debugging/" target="_blank" title="Article: The Psychology Underlying the Power of Rubber Duck Debugging">the psychology underlying the power</a> of this technique.</p>
 		</div>
-	</div>
-	<div class="mid-width">
-		<div class="disclamer">
-			<h2>Disclaimer</h2>
-			<p>Rubber Ducky is not a problem solver. It cannot solve problems itself. It just acts as a someone you can <span style="text-decoration: line-through;">quack</span> talk to instead of bothering your colleagues with stupid questions. Remember that you are the problem solver here, so the solution cannot be guaranteed. This method also might not work for all types of problems, especially those that require a collective effort.</p>
+		<div class="credits">
+			<div class="about-me">Made with ❤️ by <a href="https://twitter.com/glebable" target="_blank" class="tooltip">Gleb<span class="tooltip-text">Design & Development</span></a>.<br>Feedback is appreciated.</div>
 		</div>
-	</div>
-	<div class="button-container full-width">
-		<button onclick="chrome.webstore.install()" class="button-add" id="button-add-2">Add to Chrome</button>
-	</div>
-	<div class="credits full-width">
-		<div class="about-me">Made with ❤️ by <a href="https://twitter.com/glebable" target="_blank" class="tooltip">Gleb<span class="tooltip-text">Design & Development</span></a>.<br>Feedback is appreciated.</div>
-	</div>
+	</section>
 
 	<script>
 		if (chrome.app.isInstalled) {
@@ -128,6 +151,23 @@
 				buttons[i].innerHTML = 'Thanks for adding!';
 				buttons[i].disabled = true;
 			}
+		}
+	</script>
+	<script>
+		var questionIndex = 0;
+		carousel();
+
+		function carousel() {
+			var questions = document.getElementsByClassName('howto-question');
+			for (var i = 0; i < questions.length; i++) {
+				questions[i].classList.remove('visible');
+			}
+			questionIndex++;
+			if (questionIndex > questions.length) {
+				questionIndex = 1;
+			}
+			questions[questionIndex-1].classList.add('visible');
+			setTimeout(carousel, 2000);
 		}
 	</script>
 	<script>
@@ -152,10 +192,10 @@
 			var container = document.getElementsByClassName('random-quacks')[0];
 			var body = document.getElementsByTagName('body')[0];
 			var bodyStyle = window.getComputedStyle(body);
-			var bodyHeight = parseInt(bodyStyle.height);
-			var bodyWidth = parseInt(bodyStyle.width);
-			for (var i = 0; i <= bodyHeight; i += 150) {
-				var leftPos = Math.floor(Math.random() * (bodyWidth * 2 + 300) - 150);
+			var viewHeight = window.innerHeight;
+			var viewWidth = window.innerWidth;
+			for (var i = 0; i <= viewHeight - 150; i += 150) {
+				var leftPos = Math.floor(Math.random() * (viewWidth * 1.3 + 300) - 150);
 				var topPos = Math.floor(Math.random() * 20 + i);
 				var quack = document.createElement('DIV');
 				quack.setAttribute('style', 'top: ' + topPos + 'px; left: ' + leftPos + 'px;');

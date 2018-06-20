@@ -1,7 +1,7 @@
 body {
 	padding: 0;
 	margin: 0;
-	background: #FFD600;
+	background: #FAFAFA;
 	font-family: Helvetica Neue, Helvetica, sans-serif;
 }
 
@@ -43,7 +43,7 @@ a:active {
 }
 
 h1 {
-	font-size: 72pt;
+	font-size: 60pt;
 	line-height: 1.1em;
 	padding: 0;
 	margin: auto;
@@ -58,23 +58,163 @@ h2 {
 	letter-spacing: .04em;
 }
 
-.header {
-	position: relative;
-	text-align: center;
+ul {
+	list-style-type: none;
 }
 
-.header p {
+ul li {
 	position: relative;
-	width: 512px;
+	margin-bottom: 10pt;
+	line-height: 22pt;
+}
+
+ul li::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 4px;
+	background: #232323;
+	margin-left: -32px;
+	margin-top: 10pt; /* To roughly center in line height */
+}
+
+.full-height {
+	height: 100vh;
+}
+
+#section-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	overflow: hidden;
+}
+
+.random-quacks {
+	z-index: -10;
+	position: absolute;
+	color: #FFC400;
+	background: #FFD600;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.random-quacks > .quack {
+	font-size: 64pt;
+	font-weight: 900;
+	position: absolute;
+}
+
+.header-top {
+	width: 100%;
+	text-align: center;
+	background: #FFC400;
+}
+
+.header-top > h2 {
+	font-size: 24pt;
+	line-height: 36pt;
+	margin: 0;
+	text-transform: none;
+	padding: 16px;
+}
+
+.header-center > h2 {
+	position: relative;
+	width: 700px;
 	max-width: 90%;
 	padding: 0;
 	margin: auto;
-	margin-top: 0;
+	margin-top: 32pt;
+	text-transform: none;
 }
 
-.full-width {
-	width: 100%;
+.header-ducky {
+	padding: 16px 0;
 }
+
+.header-ducky > img {
+	min-width: 128px;
+	width: 20vw;
+	max-width: 192px;
+}
+
+#section-howto {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 6vh auto;
+}
+#section-howto > div {
+	margin: 4vh auto;
+}
+
+#section-howto > .howto-title {
+	font-size: 24pt;
+}
+
+.separator {
+	height: 4px;
+	width: 60%;
+	background: #FFC400;
+	margin: 6vh auto !important;
+}
+
+.separator.small {
+	max-width: 450px;
+}
+
+.howto-questions {
+	height: 0;
+	position: relative;
+	width: 80%;
+}
+
+.howto-question {
+	font-size: 20pt;
+	line-height: 32pt;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -48px) scale(.9, .9);
+	text-align: center;
+	height: 0;
+	opacity: 0;
+	transition: opacity .5s, transform 1s step-start 1s;
+}
+
+.howto-question.visible {
+	height: 100%;
+	opacity: 1;
+	transform: translate(-50%, 0) scale(1, 1);
+	transition: opacity 1s ease-in .1s, 
+		transform 1s ease-out 0s;
+}
+
+li.howto-item::before {
+	width: 24px;
+	height: 24px;
+	margin-left: -40px;
+	margin-top: 2px; 
+	background: url('icn/outline-check_box_outline_blank-24px.svg');
+}
+
+li.howto-item.checked::before {
+	background: url('icn/outline-check_box-24px.svg');
+}
+
+li.howto-item::before:active {
+	background: url('icn/outline-check_box-24px.svg');
+}
+
+/* Old CSS */
 
 .mid-width {
 	display: flex;
@@ -99,28 +239,6 @@ h2 {
 	width: 100%;
 }
 
-ul {
-	list-style-type: none;
-}
-
-ul li {
-	position: relative;
-	margin-bottom: 10pt;
-	line-height: 22pt;
-}
-
-ul li:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 4px;
-  background: #232323;
-  margin-left: -32px;
-  margin-top: 10pt; /* To roughly center in line height */
-}
-
 .button-container {
 	text-align: center;
 }
@@ -137,7 +255,6 @@ ul li:before {
 	background: #000000;
 	border: none;
 	border-radius: 4px;
-	margin: 0 auto;
 	outline: 0;
 	
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24), 0 4px 12px 0 rgba(0, 0, 0, 0.12);
@@ -260,7 +377,7 @@ ul li:before {
 	visibility: visible
 }
 
-.tooltip > .tooltip-text:after {
+.tooltip > .tooltip-text::after {
 	content: " ";
 	position: absolute;
 	top: 100%;
@@ -269,19 +386,6 @@ ul li:before {
 	border-width: 6px;
 	border-style: solid;
 	border-color: #000000DE transparent transparent transparent;
-}
-
-.random-quacks {
-	z-index: -1;
-	position: fixed;
-	color: #FFC400;
-	margin: 0;
-}
-
-.random-quacks > .quack {
-	font-size: 64pt;
-	font-weight: 900;
-	position: absolute;
 }
 
 
