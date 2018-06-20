@@ -203,14 +203,12 @@ span.line {
 	transform: translate(-50%, 0);
 	text-align: center;
 	opacity: 0;
-	transition: opacity .5s linear .5s, transform 1s ease-out 1s;
+	transition: opacity .5s linear 0s;
 }
 
 #section-howto .howto-question.visible {
 	opacity: 1;
-	/* transform: translate(-50%, 0) scale(1); */
-	transition: opacity 1s ease-in 0.1s, 
-		transform 1s ease-out 0s;
+	transition: opacity .5s ease-out 0s; 
 }
 
 #section-howto .howto-question::before {
@@ -222,11 +220,11 @@ span.line {
 	right: -2%;
 	background: #FAFAFA;
 	opacity: 1;
-	transition: all 1s ease-in-out 0s;
+	transition: left .7s ease-in-out .7s;
 }
 
 #section-howto .howto-question.visible::before {
-	right: 102%;
+	left: 102%;
 	opacity: 1;
 }
 
