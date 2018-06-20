@@ -200,19 +200,34 @@ span.line {
 	top: 0;
 	left: 50%;
 	width: 100%;
-	transform: translate(-50%, -48px) scale(.8);
+	transform: translate(-50%, 0);
 	text-align: center;
-	height: 0;
 	opacity: 0;
-	transition: opacity .5s, transform 1s step-start 1s;
+	transition: opacity .5s linear .5s, transform 1s ease-out 1s;
 }
 
 #section-howto .howto-question.visible {
-	height: 100%;
 	opacity: 1;
-	transform: translate(-50%, 0) scale(1);
-	transition: opacity 1s steps(5, start) 0s, 
-		transform 1s steps(5) 0s;
+	/* transform: translate(-50%, 0) scale(1); */
+	transition: opacity 1s ease-in 0.1s, 
+		transform 1s ease-out 0s;
+}
+
+#section-howto .howto-question::before {
+	content: '';
+	position: absolute;
+	height: 100px;
+	top: 0;
+	left: -2%;
+	right: -2%;
+	background: #FAFAFA;
+	opacity: 1;
+	transition: all 1s ease-in-out 0s;
+}
+
+#section-howto .howto-question.visible::before {
+	right: 102%;
+	opacity: 1;
 }
 
 #section-howto .howto-list {
@@ -237,11 +252,12 @@ span.line {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
+	margin: 0 auto;
+	
 	width: 90%;
 	max-width: 700px;
 	min-height: 60vh;
-	margin: 0 auto;
 }
 
 #section-features h2 {
@@ -262,7 +278,7 @@ span.line {
 }
 
 #section-features > div:last-child {
-	/* align-self: flex-end; */
+	align-self: flex-end;
 	/* margin-top: 25vh; */
 }
 
