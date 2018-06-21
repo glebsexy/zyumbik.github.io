@@ -87,7 +87,7 @@ ul li::before {
 }
 
 span.line {
-	display: inline-block;
+	display: block;
 }
 
 .full-height {
@@ -264,7 +264,7 @@ span.line {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 6vh auto;
+	margin: 10vh auto 6vh auto;
 }
 #section-howto > div {
 	margin: 4vh auto;
@@ -400,6 +400,74 @@ span.line {
 }
 
 
+/* QUOTES SECTION */
+
+#section-quotes {
+	min-height: 60vh;
+}
+
+
+#section-quotes > h2 {
+	font-size: 32pt;
+	width: 70%;
+	max-width: 550px;
+	margin: 6vh auto;
+}
+
+#section-quotes > .quotes {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+
+	width: 70%;
+	max-width: 550px;
+	height: 100%;
+	margin: 0 auto;
+	
+	font-style: italic;
+}
+
+#section-quotes > .quotes > .quote {
+	margin: 0;
+}
+
+#section-quotes .quote > .quote-text {
+	font-size: 18pt;
+	line-height: 24pt;
+	font-family: Garamond, Times New Roman, serif;
+	margin-bottom: 2vh;
+	margin-top: 4vh;
+	position: relative;
+}
+
+#section-quotes .quote > .quote-text::before {
+	content: '"';
+	position: absolute;
+	top: -4px;
+	left: 0;
+	margin-left: -32px;
+	font-size: 36pt;
+	color: #FFC400;
+}
+
+#section-quotes .quote > .quote-author {
+	float: right;
+	position: relative;
+}
+
+#section-quotes .quote > .quote-author::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 32px;
+	height: 3px;
+	background: #9E9E9E;
+	border-radius: 4px;
+	margin-left: -48px;
+	margin-top: 11pt;
+}
+
 /* SCREENSHOTS SECTION */
 
 #section-screenshots .slides {
@@ -408,7 +476,7 @@ span.line {
 	user-select: none;
 	max-width: 917px;
 	width: 100%;
-	margin: 0 auto;
+	margin: 20vh auto;
 }
 
 #section-screenshots .slide-container {
