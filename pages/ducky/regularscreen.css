@@ -2,7 +2,7 @@ body {
 	padding: 0;
 	margin: 0;
 	background: #FAFAFA;
-	font-family: Helvetica Neue, Helvetica, sans-serif;
+	font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
 }
 
 body > div {
@@ -107,6 +107,80 @@ span.line {
 	max-width: 450px;
 }
 
+/* Button 'Add to Chrome' */
+.button-container {
+	text-align: center;
+	width: 100%;
+}
+
+.button-add {
+	font-size: 40px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	text-transform: uppercase;
+	padding: 12px 24px;
+
+	color: #FFD600;
+	background: #000000;
+	border: none;
+	border-radius: 4px;
+	outline: 0;
+	
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24), 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+	transition: box-shadow 0.2s;
+}
+
+.button-add:hover {
+	background: #202020;
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.20), 0 8px 24px 0 rgba(0, 0, 0, 0.10);
+}
+
+.button-add:focus, .button-add:active {
+	color: #FFC400;
+	background: #303030;
+	box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Tooltip that appears on text hover */
+.tooltip {
+	position: relative;
+}
+
+.tooltip > .tooltip-text {
+	visibility: hidden;
+	position: absolute;
+	top: -180%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	white-space: nowrap;
+	background: #000000DE;
+	color: #FFD600;
+	text-transform: uppercase;
+
+	padding: 0 16px;
+	border-radius: 4px;
+	font-size: 12pt;
+	line-height: 28pt;
+}
+
+.tooltip:hover > .tooltip-text {
+	visibility: visible
+}
+
+.tooltip > .tooltip-text::after {
+	content: " ";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -6px;
+	border-width: 6px;
+	border-style: solid;
+	border-color: #000000DE transparent transparent transparent;
+}
+
+
 /* HEADER SECTION */
 
 #section-header {
@@ -170,6 +244,7 @@ span.line {
 	max-width: 192px;
 }
 
+
 /* HOWTO SECTION */
 
 #section-howto {
@@ -183,7 +258,7 @@ span.line {
 }
 
 #section-howto > .howto-title {
-	font-size: 5vw;
+	font-size: 5vmin;
 	text-align: center;
 }
 
@@ -243,6 +318,11 @@ span.line {
 #section-howto li.howto-item.checked::before {
 	background: url('icn/outline-check_box-24px.svg');
 }
+
+#section-howto .tooltip > .tooltip-text {
+	left: 10%;
+}
+
 
 /* FEATURES SECTION */
 
@@ -305,6 +385,7 @@ span.line {
 	margin: 8px 0 32px 0;
 	font-size: 14pt;
 }
+
 
 /* SCREENSHOTS SECTION */
 
@@ -371,127 +452,35 @@ span.line {
 	background: #000000;
 }
 
-/* Old CSS */
 
-.mid-width {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	max-width: 800px;
-	box-sizing: border-box;
-	padding: 0 16px;
-	margin-left: auto;
-	margin-right: auto;
+/* DETAILS SECTION */
+
+#section-details {
+	width: 90%;
+	max-width: 700px;
+	margin: 15vh auto;
 }
 
-.card {
-	background: #FAFAFA;
-	border-radius: 6px;
-	padding: 32px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin: 0 auto;
+#section-details h2 {
+	margin: 0;
+	margin-bottom: 64px;
+	font-size: 48pt;
+	line-height: 56pt;
 }
 
-.card > div {
-	width: 100%;
+#section-details ul {
+	margin-bottom: 32px;
 }
 
-.button-container {
-	text-align: center;
+#section-details .button-container {
+	margin-top: 64px;
 }
 
-.button-add {
-	font-size: 40px;
-	font-style: normal;
-	font-weight: bold;
-	line-height: normal;
-	text-transform: uppercase;
-	padding: 12px 24px;
+/* FOOTER SECTION */
 
-	color: #FFD600;
-	background: #000000;
-	border: none;
-	border-radius: 4px;
-	outline: 0;
-	
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.24), 0 4px 12px 0 rgba(0, 0, 0, 0.12);
-	transition: box-shadow 0.2s;
-}
-
-.button-add:hover {
-	background: #202020;
-	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.20), 0 8px 24px 0 rgba(0, 0, 0, 0.10);
-}
-
-.button-add:focus, .button-add:active {
-	color: #FFC400;
-	background: #303030;
-	box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
-}
-
-.disclamer {
-	padding: 24px;
-	color: #212121;
-}
-
-.disclamer p {
-	letter-spacing: 0.015em;
-}
-
-.credits {
+#section-footer .credits {
 	background: #FFC400;
 	text-align: center;
 	margin-bottom: 0;
 	padding: 32px 0;
 }
-
-.tooltip {
-	position: relative;
-}
-
-.tooltip > .tooltip-text {
-	visibility: hidden;
-	position: absolute;
-	top: -180%;
-	left: 50%;
-	transform: translateX(-50%);
-
-	white-space: nowrap;
-	background: #000000DE;
-	color: #FFD600;
-	text-transform: uppercase;
-
-	padding: 0 16px;
-	border-radius: 4px;
-	font-size: 12pt;
-	line-height: 28pt;
-}
-
-.tooltip:hover > .tooltip-text {
-	visibility: visible
-}
-
-.tooltip > .tooltip-text::after {
-	content: " ";
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	margin-left: -6px;
-	border-width: 6px;
-	border-style: solid;
-	border-color: #000000DE transparent transparent transparent;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -32,6 +32,12 @@ h3 {
 	margin-bottom: 16px;
 }
 
+/* HEADER SECTION */
+
+#section-header .random-quacks > .quack {
+	font-size: 48pt;
+}
+
 /* HOWTO SECTION */
 
 #section-howto > .howto-title {
@@ -41,6 +47,10 @@ h3 {
 #section-howto .howto-question {
 	font-size: 14pt;
 	line-height: 18pt;
+}
+
+#section-howto .tooltip > .tooltip-text {
+	left: 30%;
 }
 
 /* FEATURES SECTION */
@@ -95,23 +105,12 @@ h3 {
 	background: transparent;
 }
 
-/*  Old style */
+/* DETAILS SECTION */
 
-.mid-width {
-	padding: 0 8px;
-}
 
-.card {
-	padding: 16px;
-	border-radius: 4px;
-}
-
-.credits {
-	padding: 16px 0;
-}
-
-.random-quacks > .quack {
-	font-size: 48pt;
+#section-details h2 {
+	font-size: 24pt;
+	margin-bottom: 32px;
 }
 
 @media only screen and (max-height: 500px) {
