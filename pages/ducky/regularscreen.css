@@ -113,13 +113,14 @@ span.line {
 	width: 100%;
 }
 
-.button-add {
+a.button-add {
 	font-size: 40px;
 	font-style: normal;
 	font-weight: bold;
 	line-height: normal;
 	text-transform: uppercase;
 	padding: 12px 24px;
+	text-decoration: none;
 
 	color: #FFD600;
 	background: #000000;
@@ -131,12 +132,12 @@ span.line {
 	transition: box-shadow 0.2s;
 }
 
-.button-add:hover {
+a.button-add:hover {
 	background: #202020;
 	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.20), 0 8px 24px 0 rgba(0, 0, 0, 0.10);
 }
 
-.button-add:focus, .button-add:active {
+a.button-add:focus, .button-add:active {
 	color: #FFC400;
 	background: #303030;
 	box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.24), 0 2px 8px 0 rgba(0, 0, 0, 0.12);

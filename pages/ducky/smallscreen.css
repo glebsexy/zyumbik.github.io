@@ -23,11 +23,11 @@ h3 {
 	font-size: 16pt;
 }
 
-.button-add {
+a.button-add {
 	font-size: 14pt;
 }
 
-.button-container {
+a.button-container {
 	margin-top: 16px;
 	margin-bottom: 16px;
 }
@@ -138,6 +138,11 @@ h3 {
 
 	body > div {
 		margin: 32px 0;
+	}
+
+	#section-header .header-ducky > img {
+		visibility: hidden;
+		height: 0;
 	}
 
 }
