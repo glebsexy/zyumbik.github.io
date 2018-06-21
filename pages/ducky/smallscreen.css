@@ -1,9 +1,5 @@
 /* Style for screens less than 500px in width */
 
-body > div {
-	margin: 64px 0;
-}
-
 p, li {
 	line-height: 20pt;
 	font-size: 14pt;

@@ -5,10 +5,6 @@ body {
 	font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
 }
 
-body > div {
-	margin: 96px 0;
-}
-
 p, li, div {
 	font-size: 16pt;
 	line-height: 24pt;
@@ -560,6 +556,10 @@ a.button-add:focus, .button-add:active {
 
 
 /* FOOTER SECTION */
+
+#section-footer {
+	bottom: 0;
+}
 
 #section-footer .waves-container {
 	position: relative;
