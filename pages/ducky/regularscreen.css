@@ -183,7 +183,7 @@ span.line {
 }
 
 #section-howto > .howto-title {
-	font-size: 24pt;
+	font-size: 5vw;
 	text-align: center;
 }
 
@@ -255,7 +255,8 @@ span.line {
 	
 	width: 90%;
 	max-width: 700px;
-	min-height: 60vh;
+	/* min-height: 60vh; */
+	padding: 10vh 0;
 }
 
 #section-features h2 {
@@ -269,15 +270,17 @@ span.line {
 	flex-direction: column;
 	flex: 1;
 	padding: 0 32px;
-}
-
-#section-features > div:first-child {
-	/* align-self: flex-start; */
+	/* align-items: flex-start; */
+	/* position: relative; */
 }
 
 #section-features > div:last-child {
-	align-self: flex-end;
-	/* margin-top: 25vh; */
+	/* transform: translateY(-50%); */
+}
+
+#section-features .top-margin {
+	display: block;
+	min-height: 50%;
 }
 
 #section-features .feature-header {

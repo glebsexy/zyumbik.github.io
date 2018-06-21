@@ -103,6 +103,7 @@
 			</div>
 		</div>
 		<div class="features-cannot">
+			<div class="top-margin"></div>
 			<h2>Can't</h2>
 			<div class="feature">
 				<h3 class="feature-header">Propose solutions</h3>
@@ -152,6 +153,11 @@
 				buttons[i].disabled = true;
 			}
 		}
+	</script>
+	<script>
+		var topView = document.getElementsByClassName('top-margin')[0];
+		var viewHeight = window.getComputedStyle(topView).height;
+		topView.setAttribute('style', 'min-height: ' + viewHeight);
 	</script>
 	<script>
 		var questionIndex = 0;
