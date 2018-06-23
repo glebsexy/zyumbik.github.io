@@ -117,7 +117,7 @@ a.button-add {
 	text-transform: uppercase;
 	padding: 12px 24px;
 	text-decoration: none;
-
+	
 	color: #FFD600;
 	background: #000000;
 	border: none;
@@ -248,7 +248,7 @@ a.button-add:focus, .button-add:active {
 	padding: 16px 0;
 }
 
-#section-header .header-ducky > img {
+#section-header .header-ducky img {
 	min-width: 128px;
 	width: 20vw;
 	max-width: 192px;
@@ -554,6 +554,19 @@ a.button-add:focus, .button-add:active {
 	margin-top: 64px;
 }
 
+#section-details .suport-creator {
+	display: block;
+	margin-top: 32px;
+	text-decoration: none;
+}
+
+#section-details .suport-creator .underlined {
+	font-family: monospace;
+	letter-spacing: .04em;
+	line-height: 18pt;
+	padding: 4px;
+	border-bottom: 2px solid #FF3D00;
+}
 
 /* FOOTER SECTION */
 

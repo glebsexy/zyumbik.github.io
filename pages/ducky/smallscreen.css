@@ -130,6 +130,11 @@ a.button-container {
 	margin-bottom: 32px;
 }
 
+
+#section-details .suport-creator {
+	font-size: 12pt;
+}
+
 @media only screen and (max-height: 500px) {
 
 	body > div {
@@ -142,6 +147,7 @@ a.button-container {
 	}
 
 }
+
 
 @media only screen and (max-width: 360px) {
 	
